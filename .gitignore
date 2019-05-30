@@ -1,0 +1,127 @@
+.gradle
+.class
+/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbuilass
+.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+ass
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+
+java8Learnings/java-8-learnings/bin/main/com/example/java8learnings/Java8LearningsApplication.class
+java8Learnings/java-8-learnings/bin/main/com/example/java8learnings/streams/StreamsExample.class
+java8Learnings/java-8-learnings/bin/main/com/example/java8learnings/streams/StreamsExampleImpl.class
+java8Learnings/java-8-learnings/bin/test/com/example/java8learnings/Java8LearningsApplicationTests.class
+java8Learnings/java-8-learnings/bin/test/com/example/java8learnings/TestUtils.class
+java8Learnings/java-8-learnings/bin/test/com/example/java8learnings/streams/StreamsExampleTest.class
+java8Learnings/java-8-learnings/build.gradle
+java8Learnings/java-8-learnings/gradlew
+java8Learnings/java-8-learnings/gradlew.bat
+java8Learnings/java-8-learnings/settings.gradle
+java8Learnings/java-8-learnings/bin/main/application.properties
+java8Learnings/java-8-learnings/gradle/wrapper/gradle-wrapper.jar
+gradle-wrapper.jar
