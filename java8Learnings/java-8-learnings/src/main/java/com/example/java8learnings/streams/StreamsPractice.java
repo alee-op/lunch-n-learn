@@ -1,29 +1,12 @@
 package com.example.java8learnings.streams;
 
-import java.util.ArrayList;
+import com.example.java8learnings.models.Person;
+
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class StreamsPractice implements StreamsExample {
-
-
-    private List<String> getStringList() {
-
-        List<String> stringList = new ArrayList<>();
-        stringList.add("a1");
-        stringList.add("b1");
-        stringList.add("c1");
-
-        stringList.add("a2");
-        stringList.add("b2");
-        stringList.add("c3");
-
-        stringList.add("a3");
-        stringList.add("b3");
-        stringList.add("c2");
-
-        return stringList;
-    }
 
     @Override
     public Stream<String> getStream() {
@@ -33,5 +16,40 @@ public class StreamsPractice implements StreamsExample {
     @Override
     public List<String> getSortedList() {
         return null;
+    }
+
+    @Override
+    public List<String> getFilteredList(String filterOn) {
+        return null;
+    }
+
+    @Override
+    public List<Person> getMappedList() {
+        return null;
+    }
+
+    @Override
+    public Boolean matchAnyValues(String value) {
+        return null;
+    }
+
+    @Override
+    public Boolean matchAllValues(String value) {
+        return null;
+    }
+
+    @Override
+    public Boolean matchNoneValues(String value) {
+        return null;
+    }
+
+    @Override
+    public Integer countValues(String value) {
+        return null;
+    }
+
+    @Override
+    public Optional<String> reduceValue() {
+        return Optional.empty();
     }
 }
