@@ -1,46 +1,29 @@
 package com.example.java8learnings.streams;
 
 import com.example.java8learnings.models.Person;
-import com.example.java8learnings.utility.DataUtility;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class StreamsExampleImpl implements StreamsExample {
 
     @Override
-    public Stream<String> getStream() {
-        return null;
-    }
+    public List<String> getSortedList(List<String> listToStream) {
 
-    @Override
-    public List<String> getSortedList() {
-//        List<String> sortedList = new ArrayList();
-//        sortedList.add("a");
-//        sortedList.add("b");
-//        sortedList.add("c");
-//        sortedList.add("d");
-
-        List<String> unsortedList = DataUtility.getStringList();
-
-        List<String> sortedList = unsortedList.stream()
+        List<String> sortedList = listToStream.stream()
                 .sorted()
                 .collect(Collectors.toList());
 
         return sortedList;
     }
 
-
     @Override
-    public List<String> getFilteredList(String filterOn) {
-        List<String> toFilter = DataUtility.getStringList();
+    public List<String> getFilteredList(String filterOn, List<String> listToStream) {
 
-        List<String> filteredList = toFilter.stream()
+        List<String> filteredList = listToStream.stream()
                 .filter(s -> s.startsWith("a"))
                 .collect(Collectors.toList());
 
@@ -48,12 +31,10 @@ public class StreamsExampleImpl implements StreamsExample {
     }
 
     @Override
-    public List<Person> getMappedList() {
-
-        List<String> toMap = DataUtility.getNameList();
+    public List<Person> getMappedList(List<String> listToStream) {
 
         List<Person> personList =
-                toMap.stream()
+                listToStream.stream()
                         .map(person -> new Person(person.toString()))
                         .collect(Collectors.toList());
 
@@ -61,46 +42,57 @@ public class StreamsExampleImpl implements StreamsExample {
     }
 
     @Override
-    public Boolean matchAnyValues(String value) {
-
-        List<String> toMatch = DataUtility.getNameList();
+    public Boolean matchAnyValues(String value, List<String> listToStream) {
 
         Boolean matched =
-                toMatch.stream()
-                        .anyMatch(s -> s.contains("1"));
+                listToStream.stream()
+                        .anyMatch(s -> s.contains(value));
 
         return matched;
     }
 
+    //value = "1"
     @Override
-    public Boolean matchAllValues(String value) {
-        List<String> toMatch = DataUtility.getNameList();
+    public Boolean matchAllValues(String value, List<String> listToStream) {
 
         Boolean matched =
-                toMatch.stream()
-                        .allMatch(s -> s.contains("1"));
+                listToStream.stream()
+                        .allMatch(s -> s.contains(value));
 
         return matched;
     }
 
+    //value = "1"
     @Override
-    public Boolean matchNoneValues(String value) {
-        List<String> toMatch = DataUtility.getNameList();
+    public Boolean matchNoneValues(String value, List<String> listToStream) {
 
         Boolean matched =
-                toMatch.stream()
-                        .noneMatch(s -> s.contains("1"));
+                listToStream.stream()
+                        .noneMatch(s -> s.contains(value));
 
         return matched;
     }
 
+    //value = "ori"
     @Override
-    public Integer countValues(String value) {
-        return null;
+    public Integer countValues(String value, List<String> listToStream) {
+
+        long count =
+                listToStream.stream()
+                        .filter((s) -> s.contains(value))
+                        .count();
+
+        return (int)count;
     }
 
     @Override
-    public Optional<String> reduceValue() {
-        return Optional.empty();
+    public Optional<String> reduceValue(List<String> listToStream) {
+
+        Optional<String> reduced =
+                listToStream.stream()
+                .reduce((s1, s2) -> s1 + " & " + s2);
+
+        return reduced;
     }
+
 }
